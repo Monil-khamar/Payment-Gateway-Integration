@@ -1,0 +1,673 @@
+/*@use postcss-nested;*/
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-weight: bolder;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+/****** NAV-BAR ******/
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family:cursive;
+    margin-left: 9rem;
+    color: #f50f0f;
+}
+
+
+.navbar {
+
+ 	  background: url("./images/navbg.jpg") center center fixed; 
+      background-size: cover;
+    font-family:monospace;
+    padding: 0 0 0.3rem;
+    right: 0;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav {
+    margin-right: 5rem;
+}
+
+.nav-item {
+    padding: 0 1.5rem;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+nav li {
+    display: inline-block;
+    margin-left: 25px;
+    height: 70px;
+    line-height: 50px;
+    transition: .5s linear;
+  }
+  nav a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    color:#d64161 ;
+    text-transform: uppercase;
+  }
+  nav a:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    background: #d64161;
+    transition: width .5s linear;  
+  }
+  nav a:hover:after {width: 100%;}
+  @media screen and (max-width: 660px) {
+    header {text-align: center;}
+    ul {float: none;}
+  nav li:first-of-type {margin-left: 0;}
+}
+@media screen and (max-width: 550px) {
+    nav {overflow: visible;}
+    nav li {
+      display: block;
+      margin: 0;
+      height: 40px;
+      line-height: 40px;
+    }
+    nav li:hover {background: rgba(0,0,0,.1);}
+    nav a:after {content: none;}
+    }
+
+.nav-link {
+    color: #563f46;
+    font-family: Calibri;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.navbarlogo {
+    width: 100px;
+    height: 50px;
+    margin: -40px 23px;
+    margin-left: 2px;
+    margin-right: -130px;
+    margin-bottom: -42px;
+}
+
+
+/****** TITLE  SECTION ******/
+#title {
+    /*background-color: gray;*/
+    background: rgb(177, 174, 174);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #edf1f5, #c5b7b8);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background:rgb(177, 174, 174);
+    color: #fff;
+    margin-top: rem;
+}
+.mii{
+  margin-top: -110px;
+  width: 110%;
+  margin-left: -15px;
+}
+
+.big-heading {
+    margin: 0;
+    position: absolute;
+    right:20%;
+    left:20%;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.5;
+    color:rgb(98, 208, 30);
+    background-color: #685492;
+    width: 2000px;
+    margin-left: -500px;
+  }
+
+
+.title-image {
+    position: absolute;
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 10% 15% 35%;
+}
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+#rzp-button1 {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 15px !important;
+    text-transform: uppercase;
+    font-weight: 550;
+    line-height: 30px;
+    text-align: center;
+    padding: 7px 12px;
+    margin-top: 25px;
+    border: 2px solid transparent;
+    border-radius: 30px !important;
+    transition: all 0.5s;
+    position: absolute;
+    top:60%;
+    left:45%;
+    background-color: #aadef7;
+   
+}
+#rzp-button1:hover {
+    background-color: #051307;
+    color: rgb(255, 255, 255);
+  }
+#button {
+    display: inline-block;
+    background-color: #5d1de7;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.btntext{
+  color:rgb(233, 39, 39);
+  font-weight:bolder;
+  font-size: larger ;
+
+}
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/****** services ******/
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  
+  /*slideshow styles*/
+  
+  .slideshow {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: solid 1px white;
+  }
+  
+  .item {
+    display: flex;
+    width: 800px;
+    align-items: center;
+  }
+  
+  .slideshow-container {
+    width: 2400px;
+    transition: 1s ease;
+    display: flex;
+  }
+  
+  .slideshow-container:hover {
+    animation-play-state: paused;
+  }
+  
+  .slide {
+    animation: slide 24s ease infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(0);
+    }
+    37.5% {
+      transform: translateX(-33.333%);
+    }
+    62.5% {
+      transform: translateX(-33.333%);
+    }
+    75% {
+      transform: translateX(-66.667%);
+    }
+    99% {
+      transform: translateX(-66.667%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .item img {
+    width: 50%
+  }
+  h3{
+    color: rgb(170, 5, 170);
+  }
+  .item .caption {
+    padding-left: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size:x-large;
+    width: 50%
+  }
+
+#features {
+
+    z-index: 1;
+    position: relative;
+    background-color:rgb(249, 255, 220);
+
+}
+
+.secf {
+    display: flex;
+    justify-content: center;
+    margin-top:-20px;
+    color:darkblue ;
+    font-weight: bolder;
+    font-style: oblique;
+    font-size: 40px;
+}
+
+/* check */
+p {
+    color: #8f8f8f;
+}
+
+.feature-title {
+    font-size: 1.3rem;
+}
+
+
+
+/* CALL TO ACTION */
+#cta {
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    padding: 7% 15% 7%;
+}
+
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    /* background-image: linear-gradient(to bottom, rgb(70, 130, 180), rgb(255, 110, 127)); */
+    background-color: #b19fb9bd;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px rgb(145, 138, 138);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #c0e1f0;
+}
+
+/* Header Responsive */
+
+
+@media screen and (max-width: 412px) {
+    .big-heading {
+        margin-top: 1.2rem;
+        font-size: 1.7rem;
+    }
+    .navbar-brand {
+        position: relative;
+        top: 1.3rem;
+    }
+    .navbar-toggler {
+        position: relative;
+        margin-top: -2rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .big-heading {
+        font-size: 1.5rem;
+    }
+    .navbar-brand {
+        font-size: 2rem;
+        top: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 295px) {
+    .big-heading {
+        font-size: 1.3rem;
+    }
+    .navbar-brand {
+        font-size: 1.6rem;
+        top: 0.7rem;
+    }
+}
+
+/*contact-new */
+
+#contact {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(35, 77, 71);
+    margin-top: -550px;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: Lucida Handwriting;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+  }
+  
+  /* Left contact page */
+  .form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+  }
+  
+  .form-control, 
+  textarea {
+    max-width: 370px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  #mo{
+    margin-left: 15px;
+  }
+  
+  .send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+  }
+  
+  .alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
+  }
+  
+  /* Begin Right Contact Page */
+  .direct-contact-container {
+    max-width: 400px;
+  }
+  
+  /* Location, Phone, Email Section */
+  .contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+  }
+  
+  .list-item {
+    line-height:5;
+    color: rgb(255, 252, 252);
+  }
+  
+  .contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .place {
+    margin-left: 62px;
+  }
+  
+  .media {
+    margin-left: 70px;
+  }
+  
+  .gmail {
+    margin-left: 53px;
+  }
+  
+  .contact-text a {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .contact-text a:hover {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+  }
+  
+  
+  /* Social Media Icons */
+  .social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .social-media-list li a {
+    color: #fff;
+  }
+  
+  .social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(27,27,27);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:hover {
+    background-color: #fff; 
+  }
+  
+  .social-media-list li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .social-media-list li:hover a {
+    color: #000;
+  }
+  
+  .copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: rgb(249, 248, 248);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  hr {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Begin Media Queries*/
+  @media screen and (max-width: 850px) {
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .direct-contact-container, .form-horizontal {
+      margin: 0 auto;
+    }  
+    
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 300px;
+    }    
+    .social-media-list li {
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+    }
+    .social-media-list li:after {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 569px) {
+  
+    .direct-contact-container, .form-wrapper {
+      float: none;
+      margin: 0 auto;
+    }  
+    .form-control, textarea {
+      
+      margin: 0 auto;
+    }
+   
+    
+    .name, .email, textarea {
+      width: 280px;
+    } 
+    
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 280px;
+    }  
+    .social-media-list {
+      left: 0;
+    }
+    .social-media-list li {
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      font-size: 2rem;
+    }
+    .social-media-list li:after {
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 410px) {
+    .send-button {
+      width: 99%;
+    }
+  }
